@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "HireAppAccommodation",
+    "slug": "HireAppAccommodation",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "HireAppAccommodation"
+}
