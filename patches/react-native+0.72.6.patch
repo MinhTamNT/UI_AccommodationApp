@@ -1,0 +1,14 @@
+diff --git a/node_modules/react-native/index.js b/node_modules/react-native/index.js
+index 7149c64..f677756 100644
+--- a/node_modules/react-native/index.js
++++ b/node_modules/react-native/index.js
+@@ -435,7 +435,9 @@ if (__DEV__) {
+           "It can now be installed and imported from '@react-native-community/art' instead of 'react-native'. " +
+           'See https://github.com/react-native-art/art',
+       );
++      
+     },
++    
+   });
+ 
+   /* $FlowFixMe[prop-missing] This is intentional: Flow will error when
