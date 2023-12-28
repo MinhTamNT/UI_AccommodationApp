@@ -1,4 +1,5 @@
 import Home from "./Home";
 import Profile from "./Profile";
 import Search from "./Search";
-export { Home, Profile, Search };
+import Map from "./Map";
+export { Home, Profile, Search, Map };

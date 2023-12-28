@@ -1,8 +1,8 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home, Profile, Search } from "../screen";
-import { Ionicons } from "@expo/vector-icons";
+import { Home, Profile, Search, Map } from "../screen";
+import { Ionicons, FontAwesome, Feather } from "@expo/vector-icons";
 const Tab = createBottomTabNavigator();
 const screenOptions = {
   tabBarShowLabel: false,
@@ -26,12 +26,61 @@ const BottomNavigaton = () => {
         options={{
           tabBarIcon: ({ focused }) => {
             return (
-              <Ionicons name={focused ? "home" : "home-outline"} size={24} />
+              <Ionicons
+                name={focused ? "home" : "home-outline"}
+                size={24}
+                options={{
+                  tabBarIcon: ({ focused }) => {
+                    return (
+                      <Ionicons
+                        name={focused ? "person" : "person-outline"}
+                        size={24}
+                      />
+                    );
+                  },
+                }}
+              />
             );
           },
         }}
       />
-      <Tab.Screen name="Search" component={Search} />
+      <Tab.Screen
+        name="Map"
+        component={Map}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return <FontAwesome name={focused ? "map" : "map-o"} size={24} />;
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Search"
+        component={Search}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Ionicons
+                name={focused ? "search-sharp" : "search-outline"}
+                size={24}
+              />
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Chat"
+        component={Map}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Ionicons
+                name={focused ? "chatbubble-sharp" : "chatbubble-outline"}
+                size={24}
+              />
+            );
+          },
+        }}
+      />
       <Tab.Screen
         name="Profile"
         component={Profile}

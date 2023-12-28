@@ -1,4 +1,4 @@
-import { Feather } from "@expo/vector-icons";
+import { Feather, Ionicons } from "@expo/vector-icons";
 import React, { useRef, useEffect, useState } from "react";
 import {
   View,
@@ -8,9 +8,12 @@ import {
   Text,
   TouchableOpacity,
   TextInput,
+  Animated,
 } from "react-native";
 import Carousel, { Pagination } from "react-native-snap-carousel";
-
+import { MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { Easing } from "react-native";
 const { width } = Dimensions.get("window");
 
 const CarouselComponent = () => {
@@ -24,6 +27,18 @@ const CarouselComponent = () => {
   const carouselRef = useRef(null);
   const [activeSlide, setActiveSlide] = useState(0);
   const [valueInput, setValueInput] = useState("");
+  const navigation = useNavigation();
+  const [translateY] = useState(new Animated.Value(0));
+  const handlePressInInput = () => {
+    Animated.timing(translateY, {
+      toValue: -200,
+      duration: 300,
+      easing: Easing.out(Easing.exp),
+      useNativeDriver: false,
+    }).start(() => {
+      navigation.navigate("Search");
+    });
+  };
 
   useEffect(() => {
     const autoplayInterval = setInterval(() => {
@@ -61,31 +76,25 @@ const CarouselComponent = () => {
           inactiveDotScale={0.8}
         />
       </View>
-      <View className="flex-cols px-2 relative">
-        <View>
-          <Text className="text-xl mb-2 font-bold text-slate-700">
-            Tìm Phòng nhanh chóng
-          </Text>
+
+      <Text className="mx-2 text-16 text-text-color-weak font-semibold">
+        Tìm phòng nhanh chóng
+      </Text>
+      <Animated.View className="flex-row justify-center content-center h-[50px] items-center relative my-2 mx-3 rounded-lg border-[1px]">
+        <TouchableOpacity className="mx-2">
+          <Feather name="search" size={24} />
+        </TouchableOpacity>
+        <View className="flex-1 mr-1 rounded-lg">
+          <TextInput
+            placeholder="Enter for looking"
+            className=" h-full w-[90%] px-2"
+            onPressIn={handlePressInInput}
+          />
         </View>
-        <View className="flex-row items-center gap-2">
-          <View className="flex-1 border-[1px] rounded-lg mt-2">
-            <TouchableOpacity className="absolute top-2 z-10 right-3">
-              <Feather name="search" size={24} />
-            </TouchableOpacity>
-            <TextInput
-              value={valueInput}
-              onChangeText={(values) => setValueInput(values)}
-              placeholder="what is looking for"
-              className="h-10 px-4  "
-            />
-          </View>
-          <View>
-            <TouchableOpacity className="bg-primary-btn p-2 rounded-lg">
-              <Text className="text-color-white text-[20px]">Tìm Kiếm</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </View>
+        <TouchableOpacity className="w-[50px] ml-[7px] h-full rounded-md justify-center items-center bg-bg-color-blue-300">
+          <MaterialIcons name="qr-code-scanner" size={24} color="white" />
+        </TouchableOpacity>
+      </Animated.View>
     </View>
   );
 };
@@ -98,14 +107,14 @@ const styles = StyleSheet.create({
     height: 10,
     borderRadius: 5,
     marginHorizontal: 8,
-    backgroundColor: "#007BFF",
+    backgroundColor: "#333",
   },
   paginationInactiveDot: {
     width: 10,
     height: 10,
     borderRadius: 5,
     marginHorizontal: 8,
-    backgroundColor: "#C0C0C0",
+    backgroundColor: "gray",
   },
 });
 

@@ -9,7 +9,7 @@ const Home = () => {
     <SafeAreaView>
       <View className="flex-row justify-between items-center p-2">
         <View className="flex-col">
-          <Text className="text-[14px] text-slate-700">Xin chào</Text>
+          <Text className="text-[15px] text-text-weak-color">Welcome Back</Text>
           <Text className="text-2xl font-bold">{username}</Text>
         </View>
         <View className="flex-row gap-5 items-center">
