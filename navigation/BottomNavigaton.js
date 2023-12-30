@@ -54,20 +54,6 @@ const BottomNavigaton = () => {
         }}
       />
       <Tab.Screen
-        name="Search"
-        component={Search}
-        options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <Ionicons
-                name={focused ? "search-sharp" : "search-outline"}
-                size={24}
-              />
-            );
-          },
-        }}
-      />
-      <Tab.Screen
         name="Chat"
         component={Map}
         options={{

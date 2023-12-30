@@ -5,7 +5,7 @@ import { Feather, MaterialIcons } from "@expo/vector-icons";
 const Search = () => {
   return (
     <SafeAreaView>
-      <View className="flex-row justify-center content-center h-[50px] items-center relative my-2 mx-2 rounded-xl border-[1px]">
+      <View className="flex-row justify-center  content-center h-[50px] items-center relative  mx-2 rounded-xl border-[1px]">
         <TouchableOpacity className="mx-2">
           <Feather name="search" size={24} />
         </TouchableOpacity>

@@ -88,7 +88,6 @@ const CarouselComponent = () => {
           <TextInput
             placeholder="Enter for looking"
             className=" h-full w-[90%] px-2"
-            onPressIn={handlePressInInput}
           />
         </View>
         <TouchableOpacity className="w-[50px] ml-[7px] h-full rounded-md justify-center items-center bg-bg-color-blue-300">
