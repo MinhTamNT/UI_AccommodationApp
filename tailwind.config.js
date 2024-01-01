@@ -15,6 +15,7 @@ module.exports = {
         "text-weak-color": "#576F76",
         "bg-color-blue-200": "#2ba8fb",
         "bg-color-blue-300": "#039be5",
+        "bg-color-modal": "rgba(0, 0, 0, 0.5)",
       },
       fontSize: {
         11: "11px",

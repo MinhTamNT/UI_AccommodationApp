@@ -29,6 +29,7 @@ buildscript {
   implementation 'com.google.android.gms:play-services-base:18.0.1'
   implementation 'com.google.android.gms:play-services-location:19.0.1'
   implementation 'com.google.android.gms:play-services-maps:18.0.2'
+  implementation project(':react-native-vector-icons')
 }
     }
  
@@ -48,3 +49,4 @@ allprojects {
         maven { url 'https://www.jitpack.io' }
     }
 }
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
