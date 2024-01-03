@@ -11,7 +11,7 @@ module.exports = {
         primary: "#fe2c55",
         secondry: "#0F1A1C",
         "color-white": "#ffff",
-        "input-default": "#576F76",
+        "input-default": "#222222",
         "text-weak-color": "#576F76",
         "bg-color-blue-200": "#2ba8fb",
         "bg-color-blue-300": "#039be5",

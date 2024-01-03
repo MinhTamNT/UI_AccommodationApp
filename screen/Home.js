@@ -12,6 +12,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Fontisto } from "@expo/vector-icons";
 import Carousel from "../components/Home/Carousel";
 import ModalProfile from "../components/Modal/ModalProfile";
+import { useFonts } from "expo-font";
+import House from "../components/Home/House";
 const Home = () => {
   const username = "Nguyễn Sinh Hùng";
   const [isModalVisible, setModalVisible] = useState(false);
@@ -26,7 +28,7 @@ const Home = () => {
           <Text className="text-2xl font-bold">{username}</Text>
         </View>
         <View className="flex-row gap-5 items-center">
-          <Fontisto name="bell" size={22} />
+          <Fontisto name="bell" size={27} />
           <TouchableOpacity onPress={toggleModal}>
             <Image
               className="w-10 h-10 rounded-full"
@@ -38,6 +40,7 @@ const Home = () => {
       <ModalProfile isModalVisible={isModalVisible} onClose={toggleModal} />
       <ScrollView>
         <Carousel />
+        <House />
       </ScrollView>
     </SafeAreaView>
   );

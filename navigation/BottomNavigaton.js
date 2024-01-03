@@ -13,8 +13,9 @@ const screenOptions = {
     bottom: 0,
     right: 0,
     left: 0,
-    elevation: 0,
+    elevation: 2,
     height: 70,
+    borderRadius: 5,
   },
 };
 const BottomNavigaton = () => {
@@ -33,7 +34,7 @@ const BottomNavigaton = () => {
                   tabBarIcon: ({ focused }) => {
                     return (
                       <Ionicons
-                        name={focused ? "person" : "person-outline"}
+                        name={focused ? "home" : "home-outline"}
                         size={24}
                       />
                     );
