@@ -5,6 +5,7 @@ module.exports = {
     "./screen/**/*.{js,jsx,ts,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
   ],
+
   theme: {
     extend: {
       colors: {
@@ -16,6 +17,7 @@ module.exports = {
         "bg-color-blue-200": "#2ba8fb",
         "bg-color-blue-300": "#039be5",
         "bg-color-modal": "rgba(0, 0, 0, 0.5)",
+        "border-color-default": "#dddddd",
       },
       fontSize: {
         11: "11px",

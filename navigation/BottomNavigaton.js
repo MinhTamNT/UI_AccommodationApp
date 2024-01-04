@@ -10,12 +10,11 @@ const screenOptions = {
   headerShown: false,
   tabBarStyle: {
     position: "absolute",
-    bottom: 0,
-    right: 0,
-    left: 0,
-    elevation: 2,
-    height: 70,
-    borderRadius: 5,
+    bottom: 16,
+    right: 16,
+    left: 16,
+    elevation: 0,
+    borderRadius: 10,
   },
 };
 const BottomNavigaton = () => {
