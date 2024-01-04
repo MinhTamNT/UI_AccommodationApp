@@ -10,10 +10,10 @@ import {
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Fontisto } from "@expo/vector-icons";
-import Carousel from "../components/Home/Carousel";
-import ModalProfile from "../components/Modal/ModalProfile";
+import Carousel from "../../components/Home/Carousel";
+import ModalProfile from "../../components/Modal/ModalProfile";
 import { useFonts } from "expo-font";
-import House from "../components/Home/House";
+import House from "../../components/Home/House";
 const Home = () => {
   const username = "Nguyễn Sinh Hùng";
   const [isModalVisible, setModalVisible] = useState(false);
@@ -32,7 +32,7 @@ const Home = () => {
           <TouchableOpacity onPress={toggleModal}>
             <Image
               className="w-10 h-10 rounded-full"
-              source={require("../assets/image/default_avatart.jpg")}
+              source={require("../../assets/image/default_avatart.jpg")}
             />
           </TouchableOpacity>
         </View>

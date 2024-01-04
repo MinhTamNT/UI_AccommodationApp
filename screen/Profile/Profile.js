@@ -1,8 +1,8 @@
 import { View, Text, ScrollView, Image, StyleSheet } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import Header from "../components/Header.js";
-import ActionUser from "../components/ActionUser/ActionUser.js";
+import Header from "../../components/Header/Header.js";
+import ActionUser from "../../components/ActionUser/ActionUser.js";
 const Profile = () => {
   return (
     <SafeAreaView className="flex-1 bg-white">
