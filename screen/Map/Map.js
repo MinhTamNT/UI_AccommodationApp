@@ -20,7 +20,7 @@ export default () => (
         }}
         title="My House"
         description="This is the my house"
-        image={require("../assets/image/map_marker.png")}
+        image={require("../../assets/image/map_marker.png")}
       />
     </MapView>
   </View>

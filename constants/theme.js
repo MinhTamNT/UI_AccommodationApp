@@ -12,7 +12,7 @@ const COLOR = {
   bg_color_modal: "rgba(0, 0, 0, 0.5)",
   gray: "#83829A",
   red: "#e81e4d",
-  green: "#00C135",
+  green: "#46d160",
   offWhite: "#F3F4F8",
 };
 const SHADOWS = {

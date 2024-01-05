@@ -5,6 +5,7 @@ import { Text, View } from "react-native";
 import BottomNavigaton from "./navigation/BottomNavigaton";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Search } from "./screen";
+import UserDetail from "./screen/Profile/UserDetail/UserDetail";
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -21,7 +22,14 @@ export default function App() {
           options={{
             headerShown: false,
           }}
-        ></Stack.Screen>
+        />
+        <Stack.Screen
+          name="UserDeatil"
+          component={UserDetail}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

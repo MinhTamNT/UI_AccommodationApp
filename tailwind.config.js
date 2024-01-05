@@ -14,6 +14,7 @@ module.exports = {
         "color-white": "#ffff",
         "input-default": "#222222",
         "text-weak-color": "#576F76",
+        "text-strong-color": "#1c1c1c",
         "bg-color-blue-200": "#2ba8fb",
         "bg-color-blue-300": "#039be5",
         "bg-color-modal": "rgba(0, 0, 0, 0.5)",
